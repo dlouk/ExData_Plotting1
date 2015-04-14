@@ -39,7 +39,7 @@ epc_data_wanted$Sub_metering_3 <- as.numeric(
 png(filename=paste(project1_path, "plot3.png", sep=""), width=480, height=480)
 with(epc_data_wanted, {
      plot(date_time, Sub_metering_1, type="l",
-          ylab="Energy sub metering", xlab="")
+          ylab="Energy sub metering", xlab="", bg = 'white')
      lines(date_time, Sub_metering_2, col='Red')
      lines(date_time, Sub_metering_3, col='Blue')
                       }
