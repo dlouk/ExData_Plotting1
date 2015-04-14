@@ -38,7 +38,7 @@ epc_data_wanted$Sub_metering_3 <- as.numeric(
 # create plot 3 --> Sub metering 1/2/3 vs Date-Time
 with(epc_data_wanted, {
      plot(date_time, Sub_metering_1, type="l",
-          ylab="Global Active Power (kilowatts)", xlab="")
+          ylab="Energy sub metering", xlab="")
      lines(date_time, Sub_metering_2, col='Red')
      lines(date_time, Sub_metering_3, col='Blue')
                       }
