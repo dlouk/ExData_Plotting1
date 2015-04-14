@@ -51,6 +51,7 @@ epc_data_wanted$Voltage <- as.numeric(epc_data_wanted$Voltage)
 
 
 # create plot 4
+png(filename=paste(project1_path, "plot99.png", sep=""), width=480, height=480)
 par(mfrow = c(2, 2))
 
 with(epc_data_wanted, {
@@ -64,7 +65,7 @@ with(epc_data_wanted, {
          type="l", ylab="Energy sub metering", xlab="")
     lines(date_time, Sub_metering_2, col='Red')
     lines(date_time, Sub_metering_3, col='Blue')
-    legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",
+    legend("topright", col=c("black", "red", "blue"), lty=1, lwd=1, bty="n",
            legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
     # plot 4
     plot(date_time, Global_reactive_power, 
@@ -73,7 +74,7 @@ with(epc_data_wanted, {
     )
 
 # Copy plot to a PNG file
-dev.copy(png, file = paste(project1_path, "plot4.png", sep=""), 
-         height=480, width=480)
+#dev.copy(png, file = paste(project1_path, "plot4.png", sep=""), 
+#         height=480, width=480)
 # Don't forget to close the PNG device!
 dev.off() 
