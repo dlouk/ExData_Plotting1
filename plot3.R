@@ -36,6 +36,7 @@ epc_data_wanted$Sub_metering_3 <- as.numeric(
                                             )
 
 # create plot 3 --> Sub metering 1/2/3 vs Date-Time
+png(filename=paste(project1_path, "plot3.png", sep=""), width=480, height=480)
 with(epc_data_wanted, {
      plot(date_time, Sub_metering_1, type="l",
           ylab="Energy sub metering", xlab="")
@@ -48,8 +49,8 @@ legend("topright",  lty=1, lwd=2,
        col=c("black", "red", "blue", cex=0.75)
        )
 # Copy plot to a PNG file
-dev.copy(png, file = paste(project1_path, "plot3.png", sep=""), 
-         height=480, width=480)
+#dev.copy(png, file = paste(project1_path, "plot3.png", sep=""), 
+#         height=480, width=480)
 # Don't forget to close the PNG device!
 dev.off() 
 
