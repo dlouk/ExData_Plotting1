@@ -38,10 +38,6 @@ epc_data_wanted$Sub_metering_2 <- as.numeric(
 epc_data_wanted$Sub_metering_3 <- as.numeric(
                                     epc_data_wanted$Sub_metering_3
                                             )
-# convert Sub_metering_3 variable to numeric class
-epc_data_wanted$Sub_metering_3 <- as.numeric(
-                                    epc_data_wanted$Sub_metering_3
-                                            )
 # convert Global_reactive_power variable to numeric class
 epc_data_wanted$Global_reactive_power <- as.numeric(
                                         epc_data_wanted$Global_reactive_power
