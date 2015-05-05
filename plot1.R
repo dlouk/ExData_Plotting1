@@ -21,7 +21,8 @@ rm(epc_data)
 hist(epc_data_wanted$Global_active_power, 
      main="Global Active Power", 
      xlab="Global Active Power (kilowatts)",
-     col="red"
+     col="red",
+     bg = 'white'
      )
 # Copy plot to a PNG file
 dev.copy(png, file = paste(project1_path, "plot1.png", sep=""), 
