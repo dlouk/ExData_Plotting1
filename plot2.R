@@ -17,7 +17,6 @@ epc_data_wanted <- epc_data[epc_data$Date=="1/2/2007" |
 # delete original dataset
 rm(epc_data)
 
-
 # convert Date-Time variables to 'date_time' variable
 epc_data_wanted$date_time <- strptime(paste(epc_data_wanted$Date, 
                                             epc_data_wanted$Time, sep=" "), 
