@@ -43,6 +43,7 @@ with(epc_data_wanted, {
      lines(date_time, Sub_metering_3, col='Blue')
                       }
      )
+
 legend("topright",  lty=1, lwd=2,
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        col=c("black", "red", "blue", cex=0.75)
