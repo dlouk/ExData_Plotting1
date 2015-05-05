@@ -17,7 +17,6 @@ epc_data_wanted <- epc_data[epc_data$Date=="1/2/2007" |
 # delete original dataset
 rm(epc_data)
 
-
 # create plot 1 --> histogram of Global Active Power
 hist(epc_data_wanted$Global_active_power, 
      main="Global Active Power", 
