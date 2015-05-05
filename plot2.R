@@ -28,11 +28,14 @@ epc_data_wanted$Global_Active_Power <- as.numeric(
 
 
 # create plot 2 --> Global Active Power vs Date-Time
-plot(epc_data_wanted$date_time, epc_data_wanted$Global_Active_Power, 
-     type="l", xlab="", ylab="Global Active Power (kilowatts)", bg = 'white')
-# Copy plot to a PNG file
-dev.copy(png, file = paste(project1_path, "plot2.png", sep=""), 
-         height=480, width=480)
+png(filename=paste(project1_path, "plot2.png", sep=""), width=480, height=480)
+with(epc_data_wanted, {
+     plot(epc_data_wanted$date_time, epc_data_wanted$Global_Active_Power, 
+     type="l", 
+     xlab="", 
+     ylab="Global Active Power (kilowatts)", 
+     bg = 'white')
+                      }
+     )
 # Don't forget to close the PNG device!
 dev.off() 
-
