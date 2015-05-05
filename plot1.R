@@ -18,14 +18,18 @@ epc_data_wanted <- epc_data[epc_data$Date=="1/2/2007" |
 rm(epc_data)
 
 # create plot 1 --> histogram of Global Active Power
-hist(epc_data_wanted$Global_active_power, 
-     main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)",
-     col="red",
-     bg = 'white'
-     )
-# Copy plot to a PNG file
-dev.copy(png, file = paste(project1_path, "plot1.png", sep=""), 
-         height=480, width=480)
-# Don't forget to close the PNG device!
+
+
+
+
+png(filename=paste(project1_path, "plot1.png", sep=""), width=480, height=480)
+with(epc_data_wanted, {
+    hist(epc_data_wanted$Global_active_power, 
+         main="Global Active Power", 
+         xlab="Global Active Power (kilowatts)",
+         col="red"
+    )
+}
+)
+
 dev.off() 
