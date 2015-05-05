@@ -53,7 +53,7 @@ par(mfrow = c(2, 2))
 with(epc_data_wanted, {
     # plot 1
     plot(date_time, Global_active_power, 
-         type="l", ylab="Global Active Power (kilowatts)", xlab="")
+         type="l", ylab="Global Active Power", xlab="")
     # plot 2
     plot(date_time, Voltage, type="l", ylab="Voltage", xlab="datetime")
     # plot 3
