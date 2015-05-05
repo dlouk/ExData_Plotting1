@@ -45,9 +45,8 @@ epc_data_wanted$Global_reactive_power <- as.numeric(
 # convert Voltage variable to numeric class
 epc_data_wanted$Voltage <- as.numeric(epc_data_wanted$Voltage)
 
-
 # create plot 4
-png(filename=paste(project1_path, "plot99.png", sep=""), width=480, height=480)
+png(filename=paste(project1_path, "plot4.png", sep=""), width=480, height=480)
 par(mfrow = c(2, 2))
 
 with(epc_data_wanted, {
